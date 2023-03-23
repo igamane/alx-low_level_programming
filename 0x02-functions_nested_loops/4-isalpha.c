@@ -1,5 +1,5 @@
 /**
- * _islower - check if the letter is lower.
+ * _isalpha - check if the letter is lower.
  *
  * @c: character as input
  *
