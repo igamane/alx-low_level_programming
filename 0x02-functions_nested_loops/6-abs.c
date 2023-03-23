@@ -11,10 +11,10 @@ int _abs(int n)
 	if (n < 0)
 	{
 		abs = -n;
-	} else 
+	} else
 	{
 		abs = n;
 	}
 
-	return abs;
+	return (abs);
 }
