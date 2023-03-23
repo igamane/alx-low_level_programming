@@ -20,5 +20,5 @@ int _islower(int c)
 		alphabet++;
 	}
 
-	return result;
+	return (result);
 }
