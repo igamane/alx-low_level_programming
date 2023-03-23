@@ -22,14 +22,13 @@ int _isalpha(int c)
 	}
 
 	while (alphabet_upper <= 'Z')
-        {
-                if (c == alphabet_upper)
-                {
-                        result = 1;
-                }
+	{
+		if (c == alphabet_upper)
+		{
+			result = 1;
+		}
+		alphabet_upper++;
+	}
 
-                alphabet_upper++;
-        }
-
-	return result;
+	return (result);
 }
