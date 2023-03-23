@@ -2,6 +2,8 @@
 /**
  * print_sign - check the sign.
  *
+ * @n: input number
+ *
  * Return: Always 0.
  */
 

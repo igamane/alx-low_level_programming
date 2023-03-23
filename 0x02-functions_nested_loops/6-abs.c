@@ -1,6 +1,8 @@
 /**
  * _abs - give the absolute value
  *
+ * @n: the input number
+ *
  * Return: Always 0.
  */
 

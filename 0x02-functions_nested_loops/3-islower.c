@@ -1,6 +1,8 @@
 /**
  * _islower - check if the letter is lower.
  *
+ * @c: character input
+ *
  * Return: Always 0.
  */
 
