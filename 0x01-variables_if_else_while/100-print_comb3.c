@@ -25,10 +25,13 @@ int main(void)
 		{
 			if (first_digit != second_digit && first_digit < second_digit)
 			{
+				if (first_digit != 0 || second_digit != 1)
+				{
+					putchar(',');
+					putchar(' ');
+				}
 				putchar(first_digit + '0');
 				putchar(second_digit + '0');
-				putchar(',');
-				putchar(' ');
 			}
 			second_digit++;
 		}
@@ -37,5 +40,5 @@ int main(void)
 
 	putchar('\n');
 
-	return(0);
+	return (0);
 }
