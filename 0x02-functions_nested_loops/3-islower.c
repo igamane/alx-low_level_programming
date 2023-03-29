@@ -1,9 +1,10 @@
 /**
  * _islower - check if the letter is lower.
  *
- * @c: character input
+ * Parameters:
+ *   c - character printed
  *
- * Return: Always 0.
+ * Return: Always result.
  */
 
 int _islower(int c)
