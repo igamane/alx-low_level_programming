@@ -1,6 +1,42 @@
 #include <stdio.h>
 
 /**
+ * check_and_print - print digits
+ *
+ * Description: this is a description
+ *
+ * @first: first digit
+ *
+ * @second: second digit
+ *
+ * @third: third digit
+ *
+ * @fourth: fourth digit
+ *
+ * Return: None
+ */
+
+void check_and_print(int first, int second, int third, int fourth)
+{
+	if (first != third || second != fourth)
+	{
+		if (first != 0 ||
+			second != 0 ||
+			third != 0 ||
+			fourth != 1)
+		{
+			putchar(',');
+			putchar(' ');
+		}
+		putchar(first + '0');
+		putchar(second + '0');
+		putchar(' ');
+		putchar(third + '0');
+		putchar(fourth + '0');
+	}
+}
+
+/**
  * main - Entry point of the program
  *
  * Description: This program generates a random number and
@@ -9,27 +45,9 @@
  * Return: Always 0 (Success)
  */
 
+
 int main(void)
 {
-	void check_and_print(int first, int second, int third, int fourth)
-	{
-		if (first != third || second != fourth)
-		{
-			if (first != 0 ||
-				second != 0 ||
-				third != 0 ||
-				fourth != 1)
-			{
-				putchar(',');
-				putchar(' ');
-			}
-			putchar(first + '0');
-			putchar(second + '0');
-			putchar(' ');
-			putchar(third + '0');
-			putchar(fourth + '0');
-		}
-	}
 	int first_digit;
 
 	first_digit = 0;
