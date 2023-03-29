@@ -1,13 +1,42 @@
 #include <stdio.h>
 
 /**
+ * check_and_print - check and print numbers
+ *
  * main - Entry point of the program
  *
- * Description: This program generates a random number and
- *              determines if it is positive or negative.
+ * @first: first digit
+ *
+ * @second: second digit
+ *
+ * @third: third digit
  *
  * Return: Always 0 (Success)
  */
+
+void check_and_print(int first, int second, int third)
+{
+	if (first != second &&
+		first != third &&
+		second != third)
+	{
+		if (first < second &&
+			first < third &&
+			second < third)
+		{
+			if (first != 0 ||
+				second != 1 ||
+				third != 2)
+			{
+				putchar(',');
+				putchar(' ');
+			}
+			putchar(first + '0');
+			putchar(second + '0');
+			putchar(third + '0');
+		}
+	}
+}
 
 int main(void)
 {
@@ -29,20 +58,7 @@ int main(void)
 
 			while (third_digit <= 9)
 			{
-				if (first_digit != second_digit && first_digit != third_digit && second_digit != third_digit)
-				{
-					if (first_digit < second_digit && first_digit < third_digit && second_digit < third_digit)
-					{
-						if (first_digit != 0 || second_digit != 1 || third_digit != 2)
-						{
-							putchar(',');
-							putchar(' ');
-						}
-						putchar(first_digit + '0');
-						putchar(second_digit + '0');
-						putchar(third_digit + '0');
-					}
-				}
+				check_and_print(first_digit, second_digit, third_digit);
 				third_digit++;
 			}
 			second_digit++;
