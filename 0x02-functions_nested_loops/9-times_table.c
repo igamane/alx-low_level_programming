@@ -46,7 +46,6 @@ void times_table(void)
 			if (second_digit != 9)
 			{
 				_putchar(',');
-				_putchar(' ');
 			} else
 			{
 				_putchar('\n');
