@@ -1,90 +1,33 @@
 #include <stdio.h>
 
 /**
- * check_and_print - print digits
- *
- * Description: this is a description
- *
- * @first: first digit
- *
- * @second: second digit
- *
- * @third: third digit
- *
- * @fourth: fourth digit
- *
- * Return: None
- */
-
-void check_and_print(int first, int second, int third, int fourth)
-{
-	if (first != third || second != fourth)
-	{
-		if (first != 0 ||
-			second != 0 ||
-			third != 0 ||
-			fourth != 1)
-		{
-			putchar(',');
-			putchar(' ');
-		}
-		putchar(first + '0');
-		putchar(second + '0');
-		putchar(' ');
-		putchar(third + '0');
-		putchar(fourth + '0');
-	}
-}
-
-/**
- * main - Entry point of the program
- *
- * Description: This program generates a random number and
- *              determines if it is positive or negative.
- *
+ * main - prints all possible combinations of two two-digit numbers
  * Return: Always 0 (Success)
  */
-
-
 int main(void)
 {
-	int first_digit;
+	int i, j;
 
-	first_digit = 0;
-
-	while (first_digit <= 9)
+	for (i = 0; i < 100; i++)
 	{
-		int second_digit;
-
-		second_digit = 0;
-
-		while (second_digit <= 9)
+		for (j = 0; j < 100; j++)
 		{
-			int third_digit;
-
-			third_digit = 0;
-
-			while (third_digit <= 9)
+			if (i < j)
 			{
-				int fourth_digit;
-
-				fourth_digit = 0;
-
-				while (fourth_digit <= 9)
+				putchar((i / 10) + 48);
+				putchar((i % 10) + 48);
+				putchar(' ');
+				putchar((j / 10) + 48);
+				putchar((j % 10) + 48);
+				if (i != 98 || j != 99)
 				{
-					check_and_print(first_digit,
-							second_digit,
-							third_digit,
-							fourth_digit);
-					fourth_digit++;
+					putchar(',');
+					putchar(' ');
 				}
-				third_digit++;
 			}
-			second_digit++;
+
 		}
-		first_digit++;
 	}
 	putchar('\n');
-
 	return (0);
 }
