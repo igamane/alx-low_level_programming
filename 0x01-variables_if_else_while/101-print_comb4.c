@@ -1,72 +1,33 @@
 #include <stdio.h>
 
 /**
- * check_and_print - check and print numbers
- *
- * main - Entry point of the program
- *
- * @first: first digit
- *
- * @second: second digit
- *
- * @third: third digit
- *
+ * main - prints all possible different combinations of three digits
  * Return: Always 0 (Success)
  */
-
-void check_and_print(int first, int second, int third)
-{
-	if (first != second &&
-		first != third &&
-		second != third)
-	{
-		if (first < second &&
-			first < third &&
-			second < third)
-		{
-			if (first != 0 ||
-				second != 1 ||
-				third != 2)
-			{
-				putchar(',');
-				putchar(' ');
-			}
-			putchar(first + '0');
-			putchar(second + '0');
-			putchar(third + '0');
-		}
-	}
-}
-
 int main(void)
 {
-	int first_digit;
+	int n, m, l;
 
-	first_digit = 0;
-
-	while (first_digit <= 9)
+	for (n = 48; n < 58; n++)
 	{
-		int second_digit;
-
-		second_digit = 0;
-
-		while (second_digit <= 9)
+		for (m = 49; m < 58; m++)
 		{
-			int third_digit;
-
-			third_digit = 0;
-
-			while (third_digit <= 9)
+			for (l = 50; l < 58; l++)
 			{
-				check_and_print(first_digit, second_digit, third_digit);
-				third_digit++;
+				if (l > m && m > n)
+				{
+					putchar(n);
+					putchar(m);
+					putchar(l);
+					if (n != 55 || m != 56)
+					{
+						putchar(',');
+						putchar(' ');
+					}
+				}
 			}
-			second_digit++;
 		}
-		first_digit++;
 	}
-
 	putchar('\n');
-
 	return (0);
 }

@@ -1,4 +1,4 @@
-#include <stdio.h>
+ 6-print_numberz.c#include <stdio.h>
 
 /**
  * main - Entry point of the program
