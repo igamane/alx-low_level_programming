@@ -28,10 +28,11 @@ char *create_array(unsigned int size, char c)
 		return (NULL);
 	}
 
-	while (size >= 0)
+	int count;
+
+	for (count = 0; count < size; count ++)
 	{
-		c_array[size] = c;
-		size--;
+		c_array[count] = c;
 	}
 
 	return (c_array);
