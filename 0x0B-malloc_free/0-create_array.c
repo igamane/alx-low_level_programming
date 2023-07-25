@@ -29,7 +29,7 @@ char *create_array(unsigned int size, char c)
 		return (NULL);
 	}
 
-	for (count = 0; count < size; count ++)
+	for (count = 0; count < size; count++)
 	{
 		c_array[count] = c;
 	}
