@@ -1,22 +1,25 @@
 #include <stdlib.h>
 
 /**
- * string_nconcat - jdfj
+ * str_concat - jdfj
  *
  * Description: jhsfj
  *
+ * @concat: sfjhjf
  * @s1: sjhf
  *
  * @s2: dhjf
  *
- * @n: jfjs
+ * @size1: sjh
+ *
+ * @size2: sjhsfj
  *
  * Return: sf
  */
-char *str_concat(char *concat, 
-		char *s1, 
-		char *s2, 
-		unsigned int size1, 
+char *str_concat(char *concat,
+		char *s1,
+		char *s2,
+		unsigned int size1,
 		unsigned int size2)
 {
 	unsigned int i, j;
@@ -33,6 +36,20 @@ char *str_concat(char *concat,
 
 	return (concat);
 }
+
+/**
+ * string_nconcat - jdfj
+ *
+ * Description: jhsfj
+ *
+ * @s1: sjhf
+ *
+ * @s2: dhjf
+ *
+ * @n: jfjs
+ *
+ * Return: sf
+ */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
@@ -67,7 +84,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 	}
 
-	if ( n >= size2)
+	if (n >= size2)
 	{
 		return (str_concat(concat, s1, s2, size1, size2));
 	}
